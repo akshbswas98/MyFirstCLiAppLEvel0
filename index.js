@@ -58,3 +58,6 @@
 	  play(currentQuestion.question, currentQuestion.answer)
 	}
   console.log("You scored: ",score)
+  var Highscores = [["Akash",5],["Bikash","3"],["arnab","1"]]
+  console.log(chalk.green('Highscores are'))
+  console.table(Highscores);
