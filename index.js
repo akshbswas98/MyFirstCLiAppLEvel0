@@ -1,7 +1,9 @@
  var readlineSync = require("readline-sync");
+ const chalk = require('chalk');
+ 
      var score = 0;
     var userName = readlineSync.question("your name please? ");
-	console.log("Welcome "+ userName + " to --DO YOU KNOW Batman?--");
+	console.log("Welcome "+ chalk.yellowBright(userName) + " to --DO YOU KNOW Batman?--");
 	
 	//play function
 	function play(question,answer)
@@ -9,12 +11,12 @@
 		var userAnswer = readlineSync.question(question);
 		if(userAnswer === answer)
 		{
-			console.log("right!");
+			console.log(chalk.blue("right!"));
 			score = score + 1;
 		}
 		else
 		{
-		  console.log("wrong!");
+		  console.log(chalk.red("wrong!"));
 		  score = score -1;
 		}
 		console.log("Current score: "+ score)
