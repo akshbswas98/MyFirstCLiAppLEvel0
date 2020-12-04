@@ -9,7 +9,7 @@
 	function play(question,answer)
 	{
 		var userAnswer = readlineSync.question(question);
-		if(userAnswer === answer)
+		if(userAnswer.toLowerCase() === answer.toLowerCase())
 		{
 			console.log(chalk.blue("right!"));
 			score = score + 1;
